@@ -1,15 +1,60 @@
-{% extends "base.html" %}
 
-{% block main %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  {% for task in tasks %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Tasks</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="/index" class="nav-link">Tasks</a></li>
+          <li class="nav-item"><a href="/add" class="nav-link">Add New</a></li>
+        </ul>
+      </nav>
+      <br>
+      
+        
+      
+      <br>
+      
+
+  
     <div class="card">
       <div class="card-body">
-        <h3>{{ task.title }}</h3>
-        <p>Added on {{ task.date }}</p>
-        <a href="{{ url_for('edit', task_id=task.id) }}" class="btn btn-primary">Edit</a>
-        <a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger">Delete</a>
+        <h3>Complete To-do list!</h3>
+        <p>Added on 2024-04-12</p>
+        <a href="/edit/2" class="btn btn-primary">Edit</a>
+        <a href="/delete/2" class="btn btn-danger">Delete</a>
       </div>
     </div>
-  {% endfor %}
-{% endblock %}
+  
+    <div class="card">
+      <div class="card-body">
+        <h3>Update design!</h3>
+        <p>Added on 2024-04-12</p>
+        <a href="/edit/3" class="btn btn-primary">Edit</a>
+        <a href="/delete/3" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-body">
+        <h3>publish!</h3>
+        <p>Added on 2024-04-12</p>
+        <a href="/edit/4" class="btn btn-primary">Edit</a>
+        <a href="/delete/4" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  
+
+    </div>
+  </body>
+</html>
