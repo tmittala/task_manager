@@ -3,10 +3,16 @@
 {% block main %}
 
 <div class="container">
-  <div class="jumbotron">
-    <h1 class="display-4">Thank You for Using This To-Do List</h1>
-    <hr class="my-4">
-    <p class="lead">Here are your tasks:</p>
+  <div class="jumbotron jumbotron-fluid" style="padding: 10px; margin-bottom: 12px;">
+    <div class="container">
+      <h1 class="display-4"><b>Thank You for Using This To-Do List</b></h1>
+      <p class="lead">Here are your tasks:</p>
+      <hr class="my-4">
+      <div class="text-center">
+        <li class="nav-item d-inline"><a href="{{ url_for('add') }}" class="btn btn-success" style="padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5;"> Add New Task </a></li>
+      </div>
+      <p><i>Make sure to delete the tasks after you have completed them.</i></p>
+    </div>
   </div>
 
   {% for task in tasks %}
@@ -20,5 +26,10 @@
   </div>
   {% endfor %}
 </div>
+<footer class="footer mt-auto py-3">
+  <div class="container text-center">
+    <span class="text-muted">Created by Tushar Mittal</span>
+  </div>
+</footer>
 
 {% endblock %}
